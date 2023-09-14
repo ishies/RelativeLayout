@@ -10,40 +10,53 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp" >
+        android:paddingHorizontal="10dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
 
-
-        <Button
-            android:id="@+id/name"
+        <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Welcome to Relative Layout!"
+            android:textAlignment="center"
+            android:textSize="@dimen/heading" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="272dp"
+            android:layout_marginRight="@dimen/margin"
+
+            android:text="Hi! I'm below the title!"
+            android:textSize="@dimen/subtitle" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="0dp"
+
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/subtitle"
+            android:text="Next to the subtitle AND below the title!" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_centerInParent="true"
+            android:center="true"
             android:text="Button" />
+        <!--figure out how to center the button horizontally with above element (subtitle)-->
 
-        <Button
-            android:id="@+id/dates"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:layout_below="@id/name"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/times" />
 
-        <Button
-            android:id="@+id/times"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:layout_below="@id/name"
-            android:layout_alignParentRight="true"/>
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            android:layout_below="@id/times"
-            android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
