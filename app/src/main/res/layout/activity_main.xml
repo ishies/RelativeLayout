@@ -28,21 +28,21 @@
             android:id="@+id/subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/title"
             android:layout_marginTop="272dp"
             android:layout_marginRight="@dimen/margin"
-
             android:text="Hi! I'm below the title!"
-            android:textSize="@dimen/subtitle" />
+            android:textSize="@dimen/subtitle"
+
+            android:layout_below="@+id/title" />
 
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/title"
             android:layout_marginLeft="0dp"
-
             android:layout_marginTop="1dp"
+
+            android:layout_below="@+id/title"
             android:layout_toRightOf="@+id/subtitle"
             android:text="Next to the subtitle AND below the title!" />
 
